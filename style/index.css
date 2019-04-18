@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/road.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Arimo", sans-serif;
+  color: #475465;
+  text-align: center;
+}
+
+header {
+  font-family: "Russo One", sans-serif;
+  text-align: center;
+  padding: 30px 0;
+  color: #d9ffea;
+}
+
+.tasksBox {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  width: 40%;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+.tasksBox .addItem {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  -moz-box-shadow: inset 0px 0px 14px -3px #f2fadc;
+  -webkit-box-shadow: inset 0px 0px 14px -3px #f2fadc;
+  box-shadow: inset 0px 0px 14px -3px #f2fadc;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dbe6c4), color-stop(1, #9ba892));
+  background: -moz-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+  background: -webkit-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+  background: -o-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+  background: -ms-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+  background: linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dbe6c4", endColorstr="#9ba892",GradientType=0);
+  background-color: #dbe6c4;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #b2b8ad;
+  cursor: pointer;
+  color: #475465;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ced9bf;
+}
+.tasksBox .addItem:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #9ba892), color-stop(1, #dbe6c4));
+  background: -moz-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
+  background: -webkit-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
+  background: -o-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
+  background: -ms-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
+  background: linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9ba892", endColorstr="#dbe6c4",GradientType=0);
+  background-color: #9ba892;
+  cursor: pointer;
+}
+.tasksBox select {
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+}
+.tasksBox ul {
+  list-style: none;
+}
+.tasksBox ul li {
+  margin: 30px;
+  padding: 10px;
+  background-color: rgba(71, 84, 101, 0.3);
+  line-height: 1;
+  border: 1px solid #475465;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tasksBox ul li input[type=checkbox] {
+  margin-right: 5px;
+}
+.tasksBox ul li input[type=checkbox]:hover {
+  cursor: pointer;
+}
+.tasksBox ul li label {
+  border-radius: 50px;
+}
+.tasksBox ul li .tasksTags {
+  font-size: 0.7rem;
+}
+.tasksBox ul li .tasksTags a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  margin-right: 5px;
+}
+.tasksBox ul li .buttons {
+  height: 100%;
+}
+.tasksBox ul li i {
+  color: #475465;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  margin: 3px;
+}
+.tasksBox ul li i:hover {
+  cursor: pointer;
+}
+.tasksBox ul li .fa-pen:hover {
+  color: #2b333d;
+}
+.tasksBox ul li .fa-trash-alt:hover {
+  color: #c4170b;
+}
+
+.tagsBox {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 30%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 15px;
+}
+.tagsBox h3 {
+  padding: 10px;
+}
+.tagsBox .fa-times {
+  font-size: 0.6rem;
+  margin: 3px;
+}
+.tagsBox .fa-times:hover {
+  color: #c4170b;
+}
+.tagsBox .editTags {
+  padding: 5px;
+  margin: 10px;
+  border-radius: 20px;
+  -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+  background: -moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background: -webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background: -o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background: -ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#f6f6f6",GradientType=0);
+  background-color: #ffffff;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border: 1px solid #dcdcdc;
+  color: #666666;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+.tagsBox .editTags:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom, #dcdcdc 5%, #ffffff 100%);
+}
+.tagsBox a {
+  text-decoration: none;
+  color: #7a70d8;
+}
+
+.loginBox,
+.registerBox {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 40%;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 15px;
+}
+.loginBox form,
+.registerBox form {
+  display: flex;
+  flex-direction: column;
+}
+.loginBox form label,
+.registerBox form label {
+  text-align: left;
+  margin-bottom: 0;
+}
+.loginBox form input,
+.registerBox form input {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.loginBox form input[type=submit],
+.registerBox form input[type=submit] {
+  -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
+  background: -moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+  background: -webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+  background: -o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+  background: -ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+  background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9f9f9", endColorstr="#e9e9e9",GradientType=0);
+  background-color: #f9f9f9;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  cursor: pointer;
+  color: #475465;
+  width: min-content;
+  margin: 10px auto;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+.loginBox form input[type=submit]:hover,
+.registerBox form input[type=submit]:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+  background: -moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+  background: -webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+  background: -o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+  background: -ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+  background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e9e9e9", endColorstr="#f9f9f9",GradientType=0);
+  background-color: #e9e9e9;
+}
+.loginBox form input[type=submit]:active,
+.registerBox form input[type=submit]:active {
+  position: relative;
+  top: 1px;
+}
+
+.loginBox a {
+  color: #475465;
+  font-weight: bold;
+  text-decoration: none;
+}
+.loginBox a:hover {
+  cursor: pointer;
+  color: rgba(71, 84, 101, 0.7);
+}
+
+/*# sourceMappingURL=index.css.map */
