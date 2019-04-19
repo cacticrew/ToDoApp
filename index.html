@@ -14,12 +14,14 @@
 </head>
 <body>
     <div class="frontPanel">
-        <ul class="menu">
-            <li><a href="#"><img class="logo" src="img/logo_white.png" alt="logo"></a></li>
-            <li>Jan Kowalski</li>
-            <li><a href="#"><img class="user" src="img/user.png" alt="user"></a></li>
-            <li><a class="logout" href="login.html">Wyloguj</a></li>
-        </ul>
+        <header>
+            <a href="#"><img class="logo" src="img/logo_white.png" alt="logo"></a>
+            <ul>
+                <li>Jan Kowalski</li>
+                <li><a href="#"><img class="user" src="img/user.png" alt="user"></a></li>
+                <li><a class="logout" href="login.html">Wyloguj</a></li>
+            </ul>
+        </header>
         <hr/>
         <ul class="tasksMenu">
             <li><a href="index.html">Studia</a></li>
@@ -27,66 +29,50 @@
             <li><a href="index.html">Hobby</a></li>
         </ul>
         <div class="addBoard">
-            <input type="text" name="addForm" placeholder="Nowa tablica..." required>
+            <input type="text" name="boardAdd" placeholder="Dodaj zakładkę..." required>
             <input type="submit" value="+">
         </div>
-        </header>
         <div class="container">
-        <div class="tasksBox">
-            <form action="/">
-                <button class="addItem">Dodaj</button>
-                <select name="taskState">
-                    <option value="todo" selected>Do zrobienia</option>
-                    <option value="completed">Zrobione</option>
-                </select>
-                <ul>
-                    <li>
-                        <div class="taskText">
-                            <input type="checkbox" name="checkbox1" id="checkbox1"></input>
-                            <label for="checkbox1">Task 1</label>
-                        </div>
-                        <div class="tasksTags"><a href="#">tag1</a><a href="#">tag2</a><a href="#">tag3</a></div>
-                        <div class="buttons">
-                            <i class="fas fa-pen"></i>
-                            <i class="fas fa-trash-alt"></i>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="taskText">
-                            <input type="checkbox" name="checkbox2" id="checkbox2"></input>
-                            <label for="checkbox1">Task 2</label>
-                        </div>
-                        <div class="tasksTags"><a href="#">tag1</a><a href="#">tag2</a><a href="#">tag3</a></div>
-                        <div class="buttons">
-                            <i class="fas fa-pen"></i>
-                            <i class="fas fa-trash-alt"></i>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="taskText">
-                            <input type="checkbox" name="checkbox3" id="checkbox3"></input>
-                            <label for="checkbox3">Task 3</label>
-                        </div>
-                        <div class="tasksTags"><a href="#">tag1</a><a href="#">tag2</a><a href="#">tag3</a></div>
-                        <div class="buttons">
-                            <i class="fas fa-pen"></i>
-                            <i class="fas fa-trash-alt"></i>
-                        </div>
-                    </li>
-                </ul>
-            </form>
-        </div>
-        <div class="tagsBox">
-            <h3>Tags</h3>
-            <div class="tagList">
-                <a href="#">tag1<i class="fas fa-times"></i></a>
-                <a href="#">tag2<i class="fas fa-times"></i></a>
-                <a href="#">tag3<i class="fas fa-times"></i></a>
+            <div class="tasksBox">
+                <form action="/">
+                    <ul>
+                        <li>
+                            <div class="taskText">
+                                <input type="checkbox" name="checkbox1" id="checkbox1"></input>
+                                <label for="checkbox1">Task 1</label>
+                            </div>
+
+                            <div class="buttons">
+                                <i class="fas fa-pen"></i>
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="taskText">
+                                <input type="checkbox" name="checkbox2" id="checkbox2"></input>
+                                <label for="checkbox1">Task 2</label>
+                            </div>
+
+                            <div class="buttons">
+                                <i class="fas fa-pen"></i>
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="taskText">
+                                <input type="checkbox" name="checkbox3" id="checkbox3"></input>
+                                <label for="checkbox3">Task 3</label>
+                            </div>
+
+                            <div class="buttons">
+                                <i class="fas fa-pen"></i>
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
             </div>
-            <button class="editTags">Edit tags</button>
         </div>
     </div>
-</div>
-<header>
 </body>
 </html>
