@@ -13,16 +13,31 @@
     <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Russo+One&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>To-do list</h1>
+    <div class="frontPanel">
+        <ul class="menu">
+            <li><a href="#"><img class="logo" src="img/logo_white.png" alt="logo"></a></li>
+            <li>Jan Kowalski</li>
+            <li><a href="#"><img class="user" src="img/user.png" alt="user"></a></li>
+            <li><a class="logout" href="login.html">Wyloguj</a></li>
+        </ul>
+        <hr/>
+        <ul class="tasksMenu">
+            <li><a href="index.html">Studia</a></li>
+            <li><a href="index.html">Praca</a></li>
+            <li><a href="index.html">Hobby</a></li>
+        </ul>
+        <div class="addBoard">
+            <input type="text" name="addForm" placeholder="Nowa tablica..." required>
+            <input type="submit" value="+">
+        </div>
         </header>
+        <div class="container">
         <div class="tasksBox">
             <form action="/">
-                <button class="addItem">Add task</button>
+                <button class="addItem">Dodaj</button>
                 <select name="taskState">
-                    <option value="todo" selected>To-do tasks</option>
-                    <option value="completed">Completed tasks</option>
+                    <option value="todo" selected>Do zrobienia</option>
+                    <option value="completed">Zrobione</option>
                 </select>
                 <ul>
                     <li>
@@ -71,5 +86,7 @@
             <button class="editTags">Edit tags</button>
         </div>
     </div>
+</div>
+<header>
 </body>
 </html>

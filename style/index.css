@@ -1,78 +1,274 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  background-image: url("../img/road.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-family: "Arimo", sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #CFFA05), to(#F06543));
+  background: linear-gradient(to bottom, #CFFA05 5%, #F06543 100%);
+  font-family: 'Montserrat', sans-serif;
   color: #475465;
   text-align: center;
 }
 
 header {
-  font-family: "Russo One", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   padding: 30px 0;
-  color: #d9ffea;
+}
+
+.frontPanel {
+  width: 1260px;
+  height: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5% auto;
+  -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #fff), to(#CFFA05));
+  background: linear-gradient(to bottom, #fff 10%, #CFFA05 100%);
+}
+
+.frontPanel hr {
+  margin: 0 auto;
+  width: 90%;
+  border: 0;
+  border-top: 5px solid #8C0058;
+  padding: 5px;
+}
+
+.frontPanel .addBoard input[type=text] {
+  color: #F06543;
+  font-weight: 300;
+  margin: 10px auto;
+  padding: 10px;
+  width: 40%;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 2px solid #909090;
+}
+
+.frontPanel .addBoard input[type=text] ::-webkit-input-placeholder {
+  color: #909090;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.frontPanel .addBoard input[type=submit] {
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  background-color: #8C0058;
+  color: #CFFA05;
+  width: 40px;
+  height: 40px;
+  font-weight: 300;
+  margin: 10px 20px;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.frontPanel .addBoard input[type=submit]:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #e9e9e9), to(#f9f9f9));
+  background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+  background-color: #e9e9e9;
+  color: #CFFA05;
+}
+
+.frontPanel .addBoard input[type=submit]:active {
+  position: relative;
+  top: 3px;
+}
+
+.menu {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.menu li {
+  float: left;
+  text-decoration: none;
+  color: #8C0058;
+  font-size: 25px;
+}
+
+.menu li .logout {
+  color: #909090;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.menu li .logout:hover {
+  color: #F06543;
+  text-decoration: underline;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.menu li .logout:active {
+  position: relative;
+  top: 3px;
+}
+
+.menu li .logo {
+  margin-top: 10px;
+  margin-right: 90vh;
+  margin-left: 10px;
+}
+
+.menu li .logo, .menu .user {
+  -webkit-animation: bounceIn 0.6s;
+          animation: bounceIn 0.6s;
+  -webkit-transform: rotate(0deg) scale(1) translateZ(0);
+          transform: rotate(0deg) scale(1) translateZ(0);
+  -webkit-transition: all 0.4s cubic-bezier(0.8, 1.8, 0.75, 0.75);
+  transition: all 0.4s cubic-bezier(0.8, 1.8, 0.75, 0.75);
+  cursor: pointer;
+}
+
+.menu li .logo:hover, .menu .user:hover {
+  -webkit-transform: rotate(10deg) scale(1.1);
+          transform: rotate(10deg) scale(1.1);
+}
+
+@-webkit-keyframes bounceIn {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.tasksMenu {
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.tasksMenu li:hover {
+  color: #F06543;
+  text-decoration: underline;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .tasksBox {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: #8C0058;
   padding: 20px;
   width: 40%;
   margin: 30px auto;
   border-radius: 10px;
 }
+
 .tasksBox .addItem {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
-  -moz-box-shadow: inset 0px 0px 14px -3px #f2fadc;
-  -webkit-box-shadow: inset 0px 0px 14px -3px #f2fadc;
-  box-shadow: inset 0px 0px 14px -3px #f2fadc;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dbe6c4), color-stop(1, #9ba892));
-  background: -moz-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
-  background: -webkit-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
-  background: -o-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
-  background: -ms-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
-  background: linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dbe6c4", endColorstr="#9ba892",GradientType=0);
-  background-color: #dbe6c4;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(5%, #CFFA05), to(#F06543));
+  background: linear-gradient(right, #CFFA05 5%, #F06543 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$loginLogo', endColorstr='$loginText3',GradientType=0);
   border-radius: 6px;
-  border: 1px solid #b2b8ad;
+  border: none;
   cursor: pointer;
-  color: #475465;
+  color: #fff;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
   font-size: 15px;
-  font-weight: bold;
-  padding: 6px 24px;
+  padding: 10px 30%;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #ced9bf;
 }
+
 .tasksBox .addItem:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #9ba892), color-stop(1, #dbe6c4));
-  background: -moz-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
-  background: -webkit-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
-  background: -o-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
-  background: -ms-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
-  background: linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9ba892", endColorstr="#dbe6c4",GradientType=0);
-  background-color: #9ba892;
-  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #e9e9e9), to(#f9f9f9));
+  background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+  background-color: #e9e9e9;
+  color: #8C0058;
 }
+
+.tasksBox .addItem:active {
+  position: relative;
+  top: 3px;
+}
+
 .tasksBox select {
   margin-top: 30px;
   display: block;
+  color: #8C0058;
+  background-color: #CFFA05;
   width: 100%;
 }
+
 .tasksBox ul {
   list-style: none;
 }
+
 .tasksBox ul li {
   margin: 30px;
   padding: 10px;
@@ -80,44 +276,60 @@ header {
   line-height: 1;
   border: 1px solid #475465;
   border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .tasksBox ul li input[type=checkbox] {
   margin-right: 5px;
 }
+
 .tasksBox ul li input[type=checkbox]:hover {
   cursor: pointer;
 }
+
 .tasksBox ul li label {
   border-radius: 50px;
 }
+
 .tasksBox ul li .tasksTags {
   font-size: 0.7rem;
 }
+
 .tasksBox ul li .tasksTags a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.9);
   margin-right: 5px;
 }
+
 .tasksBox ul li .buttons {
   height: 100%;
 }
+
 .tasksBox ul li i {
   color: #475465;
   background: rgba(0, 0, 0, 0);
   border: none;
   margin: 3px;
 }
+
 .tasksBox ul li i:hover {
   cursor: pointer;
 }
+
 .tasksBox ul li .fa-pen:hover {
   color: #2b333d;
 }
+
 .tasksBox ul li .fa-trash-alt:hover {
-  color: #c4170b;
+  color: #F06543;
 }
 
 .tagsBox {
@@ -127,30 +339,29 @@ header {
   padding: 10px;
   border-radius: 15px;
 }
+
 .tagsBox h3 {
   padding: 10px;
 }
+
 .tagsBox .fa-times {
   font-size: 0.6rem;
   margin: 3px;
 }
+
 .tagsBox .fa-times:hover {
-  color: #c4170b;
+  color: #F06543;
 }
+
 .tagsBox .editTags {
   padding: 5px;
   margin: 10px;
   border-radius: 20px;
-  -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
   -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
   box-shadow: inset 0px 1px 0px 0px #ffffff;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
-  background: -moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  background: -webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  background: -o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-  background: -ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #ffffff), to(#f6f6f6));
   background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#f6f6f6",GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
   background-color: #ffffff;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -161,91 +372,172 @@ header {
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
 }
+
 .tagsBox .editTags:hover {
   cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #dcdcdc), to(#ffffff));
   background: linear-gradient(to bottom, #dcdcdc 5%, #ffffff 100%);
 }
+
 .tagsBox a {
   text-decoration: none;
-  color: #7a70d8;
+  color: #CFFA05;
+}
+
+.logincontainer {
+  width: 800px;
+  height: 490px;
+  background: none;
+  margin: 10% auto;
+  -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.logoBox {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-image: url("../img/left.png");
+  background-color: #CFFA05;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px 0 0 20px;
+  padding: 100px;
 }
 
 .loginBox,
 .registerBox {
-  background-color: rgba(255, 255, 255, 0.6);
-  width: 40%;
-  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  width: 50%;
+  height: 490px;
   padding: 30px;
-  border-radius: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0 20px 20px 0;
 }
+
+.loginBox .topButton,
+.registerBox .topButton {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.loginBox .loginAnchor,
+.loginBox .registerAnchor,
+.registerBox .loginAnchor,
+.registerBox .registerAnchor {
+  padding: 10px;
+  line-height: 60px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.loginBox .loginAnchor:hover,
+.loginBox .registerAnchor:hover,
+.registerBox .loginAnchor:hover,
+.registerBox .registerAnchor:hover {
+  color: #F06543;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.loginBox .loginAnchor:active,
+.loginBox .registerAnchor:active,
+.registerBox .loginAnchor:active,
+.registerBox .registerAnchor:active {
+  position: relative;
+  top: 3px;
+}
+
 .loginBox form,
 .registerBox form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .loginBox form label,
 .registerBox form label {
   text-align: left;
   margin-bottom: 0;
 }
+
 .loginBox form input,
 .registerBox form input {
-  margin: 10px;
+  color: #F06543;
+  font-weight: 300;
+  margin: 20px auto;
   padding: 10px;
-  border-radius: 5px;
+  width: 80%;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 2px solid #909090;
 }
+
+.loginBox form ::-webkit-input-placeholder,
+.registerBox form ::-webkit-input-placeholder {
+  color: #909090;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
 .loginBox form input[type=submit],
 .registerBox form input[type=submit] {
-  -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
-  -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
-  box-shadow: inset 0px 1px 0px 0px #ffffff;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
-  background: -moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-  background: -webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-  background: -o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-  background: -ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-  background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9f9f9", endColorstr="#e9e9e9",GradientType=0);
-  background-color: #f9f9f9;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(5%, #CFFA05), to(#F06543));
+  background: linear-gradient(right, #CFFA05 5%, #F06543 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$loginLogo', endColorstr='$loginText3',GradientType=0);
   border-radius: 6px;
-  border: 1px solid #dcdcdc;
+  border: none;
   cursor: pointer;
-  color: #475465;
+  color: #fff;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
   margin: 10px auto;
   font-size: 15px;
-  font-weight: bold;
-  padding: 6px 24px;
+  padding: 10px 30%;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #ffffff;
 }
+
 .loginBox form input[type=submit]:hover,
 .registerBox form input[type=submit]:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
-  background: -moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-  background: -webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-  background: -o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-  background: -ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #e9e9e9), to(#f9f9f9));
   background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e9e9e9", endColorstr="#f9f9f9",GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
   background-color: #e9e9e9;
+  color: #8C0058;
 }
+
 .loginBox form input[type=submit]:active,
 .registerBox form input[type=submit]:active {
   position: relative;
-  top: 1px;
+  top: 3px;
 }
-
-.loginBox a {
-  color: #475465;
-  font-weight: bold;
-  text-decoration: none;
-}
-.loginBox a:hover {
-  cursor: pointer;
-  color: rgba(71, 84, 101, 0.7);
-}
-
 /*# sourceMappingURL=index.css.map */

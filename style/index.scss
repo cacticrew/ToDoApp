@@ -8,72 +8,221 @@
 //colors
 $maincolor: rgb(71, 84, 101);
 $boxBackground: rgba(255, 255, 255, 0.6);
+$loginLogo: #CFFA05;
+$loginText1: #8C0058;
+$loginText2: #909090;
+$loginText3: #F06543;
+$white: #fff;
+$black: #000;
 
 body {
-    background: {
-        image: url('../img/road.jpg');
-        size: cover;
-        repeat: no-repeat;
-    }
-    font-family: 'Arimo', sans-serif;
+    background:linear-gradient(to bottom, $loginLogo 5%, $loginText3 100%);
+    font-family: 'Montserrat', sans-serif;
     color: $maincolor;
     text-align: center;
 }
 
 header {
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     padding: 30px 0;
-    color: rgb(217, 255, 234);
 }
 
+.frontPanel{
+    width: 1260px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5% auto;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    border-radius: 20px;
+    background: linear-gradient(to bottom, $white 10%, $loginLogo 100%);
+    hr {
+        margin: 0 auto;
+        width: 90%;
+        border: 0;
+        border-top: 5px solid $loginText1;
+        padding: 5px;
+    }
+    .addBoard{
+        input[type=text]{
+            color: $loginText3;
+            font-weight: 300;
+            margin: 10px auto;
+            padding: 10px;
+            width: 40%;
+            background: rgba(0,0,0,0);
+            border: none;
+            border-bottom: 2px solid $loginText2;
+
+        ::-webkit-input-placeholder{
+            color: $loginText2;
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+    }
+        input[type=submit] {
+            -moz-border-radius: 100%;
+            -webkit-border-radius: 100%;
+            border-radius: 100%;
+            border: none;
+            cursor:pointer;
+            background-color: $loginText1;
+            color: $loginLogo;
+            width: 40px;
+            height: 40px;
+            font-weight: 300;
+            margin: 10px 20px;
+            font-size: 25px;
+            text-decoration:none;
+            &:hover {
+                background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+                background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+                background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+                background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+                background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+                background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+                filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+                background-color:#e9e9e9;
+                color: $loginLogo;
+            }
+            &:active {
+                position:relative;
+                top:3px;
+            }
+    }
+}
+}
+
+.menu{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type:none;  
+    margin-bottom: 10px;
+    padding:0; 
+    li{
+        float: left;
+        text-decoration: none;
+        color: $loginText1;
+        font-size: 25px;
+        .logout{
+            color: $loginText2;
+            font-size: 15px;
+            text-decoration: none;
+            &:hover {
+                color: $loginText3;
+                text-decoration: underline;
+                font-weight: 700;
+                cursor: pointer;
+            }
+            &:active {
+                position: relative;
+                top:3px;
+            }
+
+        }
+    }
+    li .logo{
+        margin-top: 10px;
+        margin-right: 90vh;;
+        margin-left: 10px;
+    }
+    li .logo, .user{
+        animation: bounceIn 0.6s;
+        transform: rotate(0deg) scale(1) translateZ(0);
+        transition: all 0.4s cubic-bezier(.8,1.8,.75,.75);
+        &:hover {
+            transform: rotate(10deg) scale(1.1);
+          }
+        cursor: pointer;
+        @keyframes bounceIn {
+            0% {
+              opacity: 1;
+              transform: scale(.3);
+            } 
+          
+            50% {
+              opacity: 1;
+              transform: scale(1.05);
+            } 
+          
+            70% {
+              opacity: 1;
+              transform: scale(.9);
+            }
+          
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+    }
+}
+
+.tasksMenu{
+    font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type:none;
+    li{
+        &:hover {
+            color: $loginText3;
+            text-decoration: underline;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+
+}
 .tasksBox {
-    background-color: $boxBackground;
+    background-color: $loginText1;
     padding: 20px;
     width: 40%;
     margin: 30px auto;
     border-radius: 10px;
     .addItem {
-        display: block;
-        margin: 10px auto;
-        padding: 10px;
-        -moz-box-shadow:inset 0px 0px 14px -3px #f2fadc;
-        -webkit-box-shadow:inset 0px 0px 14px -3px #f2fadc;
-        box-shadow:inset 0px 0px 14px -3px #f2fadc;
-        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dbe6c4), color-stop(1, #9ba892));
-        background:-moz-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
-        background:-webkit-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
-        background:-o-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
-        background:-ms-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
-        background:linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
-        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbe6c4', endColorstr='#9ba892',GradientType=0);
-        background-color:#dbe6c4;
+        background:-webkit-gradient(linear, left, right, color-stop(0.05, $loginLogo), color-stop(1, $loginText3));
+        background:-moz-linear-gradient(right, $loginLogo 5%, $loginText3 100%);
+        background:-webkit-linear-gradient(right, $loginLogo 5%, $loginText3 100%);
+        background:-o-linear-gradient(right, $loginLogo 5%, $loginText3 100%);
+        background:-ms-linear-gradient(right, $loginLogo 5%, $loginText3 100%);
+        background:linear-gradient(right, $loginLogo 5%, $loginText3 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='$loginLogo', endColorstr='$loginText3',GradientType=0);
         -moz-border-radius:6px;
         -webkit-border-radius:6px;
         border-radius:6px;
-        border:1px solid #b2b8ad;
+        border:none;
         cursor:pointer;
-        color: $maincolor;
+        color: $white;
+        width: min-content;
         font-size:15px;
-        font-weight:bold;
-        padding:6px 24px;
+        padding: 10px 30%;
         text-decoration:none;
-        text-shadow:0px 1px 0px #ced9bf;
         &:hover {
-            background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #9ba892), color-stop(1, #dbe6c4));
-            background:-moz-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
-            background:-webkit-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
-            background:-o-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
-            background:-ms-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
-            background:linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
-            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9ba892', endColorstr='#dbe6c4',GradientType=0);
-            background-color:#9ba892;
-            cursor: pointer;
+            background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+            background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+            background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+            background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+            background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+            background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+            background-color:#e9e9e9;
+            color: $loginText1;
+        }
+        &:active {
+            position:relative;
+            top:3px;
         }
     }
     select {
         margin-top: 30px;
         display: block;
+        color: $loginText1;
+        background-color: $loginLogo;
         width: 100%;
     }
     ul {
@@ -111,7 +260,7 @@ header {
 
             i {
                 color: $maincolor;
-                background:rgb(0,0,0,0);
+                background:rgba(0,0,0,0);
                 border: none;
                 margin: 3px;
                 &:hover {
@@ -125,7 +274,7 @@ header {
             }
             .fa-trash-alt {
                 &:hover {
-                    color: rgb(196, 23, 11);
+                    color: $loginText3;
                 }
             }
         }
@@ -145,7 +294,7 @@ header {
         font-size: 0.6rem;
         margin: 3px;
         &:hover {
-            color: rgb(196, 23, 11);
+            color: $loginText3;
         }
     }
     .editTags {
@@ -178,17 +327,66 @@ header {
     }
     a {
      text-decoration: none;
-     color: rgb(122, 112, 216);
+     color: $loginLogo;
     }
 }
 
+// login i register
+.logincontainer{
+    width: 800px;
+    height: 490px;
+    background: none;
+    margin: 10% auto;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    border-radius: 20px;
+
+}
+.logoBox{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-image: url("../img/left.png");
+    background-color: $loginLogo;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 20px 0 0 20px;
+    padding: 100px;
+}
 .loginBox,
 .registerBox {
-    background-color: $boxBackground;
-    width: 40%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    .topButton{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    background-color: $white;
+    font-family: 'Montserrat', sans-serif;
+    width: 50%;
+    height: 490px;
     padding: 30px;
-    border-radius: 15px;
+    box-sizing: border-box;
+    border-radius: 0 20px 20px 0;
+    .loginAnchor,
+    .registerAnchor{
+        padding: 10px;
+        line-height: 60px;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover{
+            color: $loginText3;
+            font-weight: 900;
+            text-decoration: none;
+        }
+        &:active {
+            position:relative;
+            top:3px;
+        }
+    }
     form {
         display: flex;
         flex-direction: column;
@@ -196,36 +394,41 @@ header {
             text-align: left;
             margin-bottom: 0;
         }
-        input {
-            margin: 10px;
+        input{
+            color: $loginText3;
+            font-weight: 300;
+            margin: 20px auto;
             padding: 10px;
-            border-radius: 5px;
-        };
+            width: 80%;
+            background: rgba(0,0,0,0);
+            border: none;
+            border-bottom: 2px solid $loginText2;
+        }
+        ::-webkit-input-placeholder{
+            color: $loginText2;
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
         input[type=submit] {
-            -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-            -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-            box-shadow:inset 0px 1px 0px 0px #ffffff;
-            background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
-            background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-            background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-            background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-            background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-            background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
-            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
-            background-color:#f9f9f9;
+            background:-webkit-gradient(linear, left, right, color-stop(0.05, $loginLogo), color-stop(1, $loginText3));
+            background:-moz-linear-gradient(right, $loginLogo 5%, $loginText3 100%);
+            background:-webkit-linear-gradient(right, $loginLogo 5%, $loginText3 100%);
+            background:-o-linear-gradient(right, $loginLogo 5%, $loginText3 100%);
+            background:-ms-linear-gradient(right, $loginLogo 5%, $loginText3 100%);
+            background:linear-gradient(right, $loginLogo 5%, $loginText3 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='$loginLogo', endColorstr='$loginText3',GradientType=0);
             -moz-border-radius:6px;
             -webkit-border-radius:6px;
             border-radius:6px;
-            border:1px solid #dcdcdc;
+            border:none;
             cursor:pointer;
-            color:$maincolor;
+            color: $white;
             width: min-content;
             margin: 10px auto;
             font-size:15px;
-            font-weight:bold;
-            padding:6px 24px;
+            padding: 10px 30%;
             text-decoration:none;
-            text-shadow:0px 1px 0px #ffffff;
             &:hover {
                 background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
                 background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
@@ -235,23 +438,12 @@ header {
                 background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
                 filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
                 background-color:#e9e9e9;
+                color: $loginText1;
             }
             &:active {
                 position:relative;
-                top:1px;
+                top:3px;
             }
-        }
-    }
-}
-
-.loginBox {
-    a {
-        color: $maincolor;
-        font-weight: bold;
-        text-decoration: none;
-        &:hover {
-            cursor: pointer;
-            color: rgba(71, 84, 101, 0.7);
         }
     }
 }
