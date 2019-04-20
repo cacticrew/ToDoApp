@@ -11,8 +11,7 @@ body {
   font-size: calc(10px + 0.8vw);
   text-align: center;
 }
-
-.frontPanel {
+body .frontPanel {
   width: 90vw;
   margin: 5% auto;
   padding-bottom: 10px;
@@ -20,66 +19,26 @@ body {
   border-radius: 20px;
   background: linear-gradient(to bottom, white 10%, #CFFA05 100%);
 }
-.frontPanel hr {
-  margin: 0 auto;
-  width: 100%;
-  border-top: 5px solid #8C0058;
-}
-.frontPanel .input {
+body .frontPanel .input {
   margin: 10px;
 }
-.frontPanel select {
+body .frontPanel select {
   padding: 3px;
 }
-
-header {
+body header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   list-style: none;
 }
-header ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  padding: 10px;
-  list-style: none;
-  text-decoration: none;
-  color: #8C0058;
-  font-size: calc(16px + 1vw);
-}
-header ul li {
-  margin: 0 5px;
-}
-header ul .logout {
-  color: #909090;
-  font-size: 1rem;
-  text-decoration: none;
-}
-header ul .logout:hover {
-  color: #F06543;
-  text-decoration: underline;
-  font-weight: 700;
-  cursor: pointer;
-}
-header ul .logout:active {
-  position: relative;
-  top: 3px;
-}
-header .logo {
-  margin: 10px 0 0 20px;
-}
-header .user {
-  margin-top: 10px;
-}
-header .logo, header .user {
+body header .logo, body header .user {
   animation: bounceIn 0.6s;
   transform: rotate(0deg) scale(1) translateZ(0);
   transition: all 0.4s cubic-bezier(0.8, 1.8, 0.75, 0.75);
   cursor: pointer;
 }
-header .logo:hover, header .user:hover {
+body header .logo:hover, body header .user:hover {
   transform: rotate(10deg) scale(1.1);
 }
 @keyframes bounceIn {
@@ -100,71 +59,120 @@ header .logo:hover, header .user:hover {
     transform: scale(1);
   }
 }
-
-.tagBox {
+body header .logo {
+  margin: 10px 0 0 20px;
+}
+body header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 10px;
+  list-style: none;
+  text-decoration: none;
+  color: #8C0058;
+  font-size: calc(16px + 1vw);
+}
+body header ul li {
+  margin: 0 5px;
+}
+body header ul .user {
+  margin-top: 10px;
+}
+body header ul .logout {
+  color: #909090;
+  font-size: 1rem;
+  text-decoration: none;
+}
+body header ul .logout:hover {
+  color: #F06543;
+  text-decoration: underline;
+  font-weight: 700;
+  cursor: pointer;
+}
+body header ul .logout:active {
+  position: relative;
+  top: 3px;
+}
+body hr {
+  margin: 0 auto;
+  width: 100%;
+  border-top: 5px solid #8C0058;
+}
+body .tagBox {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  margin: 10px 0 0 10px;
 }
-.tagBox .tagList {
+body .tagBox .addTag .fa-tags, body .tagBox .addTag .fa-plus {
+  color: rgba(0, 0, 0, 0.6);
+}
+body .tagBox .tagList {
   padding: 10px;
   font-size: 1.3rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   list-style: none;
 }
-.tagBox .tagList li {
+body .tagBox .tagList li {
+  display: flex;
+  align-items: center;
   background: rgba(0, 0, 0, 0.1);
   padding: 5px;
   margin: 5px;
   border-radius: 5px;
 }
-.tagBox .tagList a {
+body .tagBox .tagList li .fa-times {
+  margin: 5px;
+  font-size: 0.8rem;
+  color: rgba(140, 0, 88, 0.5);
+}
+body .tagBox .tagList a {
   color: #8C0058;
   text-decoration: none;
 }
-.tagBox .tagList a:hover {
+body .tagBox .tagList a:hover {
   color: #F06543;
   font-weight: 700;
   cursor: pointer;
 }
-
-.tasksMenu {
+body .tasksMenu {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 40px;
   padding: 10px;
 }
-.tasksMenu form {
+body .tasksMenu form {
   display: flex;
   align-items: center;
 }
-.tasksMenu input[type=text] {
+body .tasksMenu input[type=text] {
   padding: 5px;
   border-radius: 20px;
 }
-.tasksMenu .fa-plus-circle {
+body .tasksMenu .fa-plus-circle {
   padding: 10px;
   font-size: 2.2rem;
   color: #8C0058;
   font-weight: bold;
 }
-.tasksMenu .fa-plus-circle:hover {
+body .tasksMenu .fa-plus-circle:hover {
   color: #F06543;
 }
-.tasksMenu .fa-plus-circle:active {
+body .tasksMenu .fa-plus-circle:active {
   font-size: 2.1rem;
 }
-
-.tasksBox {
+body .tasksBox {
   width: 60%;
   margin: 10px auto;
   border-radius: 10px;
 }
-.tasksBox ul {
+body .tasksBox ul {
   list-style: none;
 }
-.tasksBox ul li {
+body .tasksBox ul li {
   color: white;
   background: linear-gradient(to right, #8C0058 5%, #F06543 100%);
   padding: 10px;
@@ -175,41 +183,41 @@ header .logo:hover, header .user:hover {
   justify-content: space-between;
   align-items: center;
 }
-.tasksBox ul li:first-child {
+body .tasksBox ul li:first-child {
   border-bottom: 0;
 }
-.tasksBox ul li:last-child {
+body .tasksBox ul li:last-child {
   border-top: 0;
 }
-.tasksBox ul li input[type=checkbox] {
+body .tasksBox ul li input[type=checkbox] {
   margin-right: 5px;
 }
-.tasksBox ul li input[type=checkbox]:hover {
+body .tasksBox ul li input[type=checkbox]:hover {
   cursor: pointer;
 }
-.tasksBox ul li label {
+body .tasksBox ul li label {
   border-radius: 50px;
 }
-.tasksBox ul li .tasksTags {
+body .tasksBox ul li .tasksTags {
   font-size: 1rem;
 }
-.tasksBox ul li .tasksTags a {
+body .tasksBox ul li .tasksTags a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.9);
   margin-right: 5px;
 }
-.tasksBox ul li .buttons {
+body .tasksBox ul li .buttons {
   height: 100%;
 }
-.tasksBox ul li i {
+body .tasksBox ul li i {
   color: #8C0058;
   margin: 3px;
 }
-.tasksBox ul li i:hover {
+body .tasksBox ul li i:hover {
   cursor: pointer;
 }
-.tasksBox ul li .fa-pen:hover,
-.tasksBox ul li .fa-trash-alt:hover {
+body .tasksBox ul li .fa-pen:hover,
+body .tasksBox ul li .fa-trash-alt:hover {
   color: #CFFA05;
 }
 

@@ -7,7 +7,6 @@
     <meta name="description" content="To-do list">
     <meta name="keywords" content="to-do app, task manager, planner">
     <meta name="author" content="Konrad Łączniak, Mateusz Kuzaj, Martyna Kępińska">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
     <link rel="stylesheet" href="style/index.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -25,17 +24,15 @@
         </header>
         <hr/>
         <div class="tagBox">
-            <div class="ui right labeled left icon input">
-                <i class="tags icon"></i>
-                <input type="text" placeholder="Enter tags">
-                <a class="ui tag label">
-                    Add Tag
-                </a>
+            <div class="addTag">
+                <i class="fas fa-tags"></i>
+                <input type="text" placeholder="Add tag..."></input>
+                <i class="fas fa-plus"></i>
             </div>
             <ul class="tagList">
-                <li><a href="index.html">Studia</a></li>
-                <li><a href="index.html">Praca</a></li>
-                <li><a href="index.html">Hobby</a></li>
+                <li><a href="index.html">Studia</a><i class="fas fa-times"></i></li>
+                <li><a href="index.html">Praca</a><i class="fas fa-times"></i></li>
+                <li><a href="index.html">Hobby</a><i class="fas fa-times"></i></li>
             </ul>
         </div>
         <div class="container">
