@@ -25,40 +25,16 @@ body {
   width: 100%;
   border-top: 5px solid #8C0058;
 }
-.frontPanel .addBoard {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-.frontPanel .addBoard input[type=text] {
-  color: white;
-  padding: 10px;
-  width: 40%;
-  background: #8C0058;
-  border: 2px solid white;
-  border-radius: 50px;
-}
-.frontPanel .addBoard input[type=text] ::-webkit-input-placeholder {
-  color: #909090;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-.frontPanel .addBoard .fa-plus-circle {
-  cursor: pointer;
-  color: #8C0058;
+.frontPanel .input {
   margin: 10px;
-  font-size: 2rem;
 }
-.frontPanel .addBoard .fa-plus-circle:hover {
-  color: #F06543;
-}
-.frontPanel .addBoard .fa-plus-circle:active {
-  font-size: 1.9rem;
+.frontPanel select {
+  padding: 5px;
 }
 
 header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   list-style: none;
@@ -125,26 +101,34 @@ header .logo:hover, header .user:hover {
   }
 }
 
-.tasksMenu {
+.tagBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tagBox .tagList {
   padding: 10px;
   font-size: 1.5rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   list-style: none;
 }
-.tasksMenu a {
+.tagBox .tagList li {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.tagBox .tagList a {
   color: #8C0058;
   text-decoration: none;
 }
-.tasksMenu a:hover {
+.tagBox .tagList a:hover {
   color: #F06543;
-  text-decoration: underline;
   font-weight: 700;
   cursor: pointer;
 }
 
 .tasksBox {
-  padding: 20px;
   width: 60%;
   margin: 30px auto;
   border-radius: 10px;

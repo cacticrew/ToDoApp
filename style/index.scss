@@ -19,6 +19,8 @@ body {
     text-align: center;
 }
 
+
+
 .frontPanel {
     width: 90vw;
     height: 80vh;
@@ -31,42 +33,17 @@ body {
         width: 100%;
         border-top: 5px solid $loginText1;
     }
-    .addBoard {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        input[type=text] {
-            color: white;
-            padding: 10px;
-            width: 40%;
-            background: $loginText1;
-            border: 2px solid white;
-            border-radius: 50px;
-
-            ::-webkit-input-placeholder {
-                color: $loginText2;
-                font-weight: 300;
-                letter-spacing: 1px;
-            }
-        }
-        .fa-plus-circle {
-            cursor: pointer;
-            color: $loginText1;
-            margin: 10px;
-            font-size: 2rem;
-            &:hover {
-                color: $loginText3;
-            }
-            &:active {
-                font-size: 1.9rem;
-            }
-        }
+    .input {
+        margin: 10px;
+    }
+    select {
+        padding: 5px;
     }
 }
 
 header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     list-style: none;
@@ -136,26 +113,36 @@ header {
     }
 }
 
-.tasksMenu {
-    padding: 10px;
-    font-size: 1.5rem;
+.tagBox {
     display: flex;
-    justify-content: space-evenly;
-    list-style:none;
-    a {
-        color: $loginText1;
-        text-decoration: none;
-        &:hover {
-            color: $loginText3;
-            text-decoration: underline;
-            font-weight: 700;
-            cursor: pointer;
+    flex-wrap: wrap;
+    .tagList {
+        padding: 10px;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        list-style:none;
+        li {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        a {
+            color: $loginText1;
+            text-decoration: none;
+            &:hover {
+                color: $loginText3;
+                font-weight: 700;
+                cursor: pointer;
+            }
         }
     }
 }
 
+
+
 .tasksBox {
-    padding: 20px;
     width: 60%;
     margin: 30px auto;
     border-radius: 10px;
@@ -327,13 +314,13 @@ header {
 
 // Media queries
 
-@media (max-width: "400px") {
+@media (max-width: 400px) {
     header {
         flex-direction: column;
     }
 }
 
-@media (max-width: "800px") {
+@media (max-width: 800px) {
     .tasksBox {
         width: 80%;
     }
@@ -343,7 +330,7 @@ header {
     }
 }
 
-@media (max-height: "500px") {
+@media (max-height: 500px) {
     .frontPanel {
         height: auto;
     }
