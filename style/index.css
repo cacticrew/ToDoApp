@@ -6,16 +6,16 @@
 
 body {
   background: linear-gradient(to bottom, #CFFA05 5%, #F06543 100%);
+  background-attachment: fixed;
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  color: #475465;
+  font-size: calc(10px + 0.8vw);
   text-align: center;
 }
 
 .frontPanel {
   width: 90vw;
   height: 80vh;
-  margin: 30px auto;
+  margin: 5% auto;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   background: linear-gradient(to bottom, white 10%, #CFFA05 100%);
@@ -25,9 +25,14 @@ body {
   width: 100%;
   border-top: 5px solid #8C0058;
 }
+.frontPanel .addBoard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
 .frontPanel .addBoard input[type=text] {
   color: white;
-  margin: 10px auto;
   padding: 10px;
   width: 40%;
   background: #8C0058;
@@ -39,18 +44,17 @@ body {
   font-weight: 300;
   letter-spacing: 1px;
 }
-.frontPanel .addBoard input[type=submit] {
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
+.frontPanel .addBoard .fa-plus-circle {
   cursor: pointer;
-  background-color: #8C0058;
-  color: #CFFA05;
-  width: 40px;
-  font-weight: 300;
+  color: #8C0058;
   margin: 10px;
   font-size: 2rem;
-  text-decoration: none;
+}
+.frontPanel .addBoard .fa-plus-circle:hover {
+  color: #F06543;
+}
+.frontPanel .addBoard .fa-plus-circle:active {
+  font-size: 1.9rem;
 }
 
 header {
@@ -67,7 +71,7 @@ header ul {
   list-style: none;
   text-decoration: none;
   color: #8C0058;
-  font-size: 2rem;
+  font-size: calc(16px + 1vw);
 }
 header ul li {
   margin: 0 5px;
@@ -88,8 +92,10 @@ header ul .logout:active {
   top: 3px;
 }
 header .logo {
+  margin: 10px 0 0 20px;
+}
+header .user {
   margin-top: 10px;
-  margin-left: 10px;
 }
 header .logo, header .user {
   animation: bounceIn 0.6s;
@@ -157,6 +163,12 @@ header .logo:hover, header .user:hover {
   justify-content: space-between;
   align-items: center;
 }
+.tasksBox ul li:first-child {
+  border-bottom: 0;
+}
+.tasksBox ul li:last-child {
+  border-top: 0;
+}
 .tasksBox ul li input[type=checkbox] {
   margin-right: 5px;
 }
@@ -167,7 +179,7 @@ header .logo:hover, header .user:hover {
   border-radius: 50px;
 }
 .tasksBox ul li .tasksTags {
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 .tasksBox ul li .tasksTags a {
   text-decoration: none;
@@ -193,7 +205,7 @@ header .logo:hover, header .user:hover {
   display: flex;
   width: 60%;
   height: 80vh;
-  margin: 20px auto;
+  margin: 5% auto;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
@@ -313,6 +325,27 @@ header .logo:hover, header .user:hover {
 .registerBox form input[type=submit]:active {
   position: relative;
   top: 3px;
+}
+
+@media (max-width: 400px) {
+  header {
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  .tasksBox {
+    width: 80%;
+  }
+
+  .logincontainer {
+    flex-direction: column;
+    width: 80%;
+  }
+}
+@media (max-height: 500px) {
+  .frontPanel {
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
