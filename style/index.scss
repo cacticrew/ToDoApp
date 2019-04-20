@@ -140,7 +140,21 @@ header {
     }
 }
 
-
+.tasksMenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    input[type=text] {
+        padding: 10px;
+        border-radius: 20px;
+    }
+    .fa-plus-circle {
+        padding: 10px;
+        font-size: 2rem;
+        color: $loginText1;
+        font-weight: bold;
+    }
+}
 
 .tasksBox {
     width: 60%;

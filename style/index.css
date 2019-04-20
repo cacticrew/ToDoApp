@@ -128,6 +128,22 @@ header .logo:hover, header .user:hover {
   cursor: pointer;
 }
 
+.tasksMenu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tasksMenu input[type=text] {
+  padding: 10px;
+  border-radius: 20px;
+}
+.tasksMenu .fa-plus-circle {
+  padding: 10px;
+  font-size: 2rem;
+  color: #8C0058;
+  font-weight: bold;
+}
+
 .tasksBox {
   width: 60%;
   margin: 30px auto;
