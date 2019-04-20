@@ -114,8 +114,24 @@ body {
         align-items: center;
         margin: 10px 0 0 10px;
         .addTag {
+            display: flex;
+            justify-content: center;
+            input[type=text] {
+                padding: 3px;
+                margin: 0 5px;
+            }
             .fa-tags, .fa-plus {
-            color: rgba(0, 0, 0, 0.6);
+                color: rgba(0, 0, 0, 0.6);
+            }
+            .fa-plus {
+                cursor: pointer;
+                &:hover {
+                    color: $loginText1;
+                }
+                &:active {
+                    font-size: 1.2rem;
+                }
+
             }
         }
         .tagList {
@@ -124,7 +140,7 @@ body {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            list-style:none;
+            list-style: none;
             li {
                 display: flex;
                 align-items: center;
@@ -136,6 +152,13 @@ body {
                     margin: 5px;
                     font-size: 0.8rem;
                     color: rgba(140, 0, 88, 0.5);
+                    cursor: pointer;
+                    &:hover {
+                        color: black;
+                    }
+                    &:active {
+                        font-size: 0.7rem;
+                    }
                 }
             }
             a {
@@ -151,7 +174,7 @@ body {
     }
     .tasksMenu {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         margin-top: 40px;
         padding: 10px;

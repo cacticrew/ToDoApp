@@ -104,8 +104,25 @@ body .tagBox {
   align-items: center;
   margin: 10px 0 0 10px;
 }
+body .tagBox .addTag {
+  display: flex;
+  justify-content: center;
+}
+body .tagBox .addTag input[type=text] {
+  padding: 3px;
+  margin: 0 5px;
+}
 body .tagBox .addTag .fa-tags, body .tagBox .addTag .fa-plus {
   color: rgba(0, 0, 0, 0.6);
+}
+body .tagBox .addTag .fa-plus {
+  cursor: pointer;
+}
+body .tagBox .addTag .fa-plus:hover {
+  color: #8C0058;
+}
+body .tagBox .addTag .fa-plus:active {
+  font-size: 1.2rem;
 }
 body .tagBox .tagList {
   padding: 10px;
@@ -127,6 +144,13 @@ body .tagBox .tagList li .fa-times {
   margin: 5px;
   font-size: 0.8rem;
   color: rgba(140, 0, 88, 0.5);
+  cursor: pointer;
+}
+body .tagBox .tagList li .fa-times:hover {
+  color: black;
+}
+body .tagBox .tagList li .fa-times:active {
+  font-size: 0.7rem;
 }
 body .tagBox .tagList a {
   color: #8C0058;
@@ -139,7 +163,7 @@ body .tagBox .tagList a:hover {
 }
 body .tasksMenu {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-top: 40px;
   padding: 10px;
