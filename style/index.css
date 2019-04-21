@@ -395,6 +395,7 @@ body .tasksBox ul li .fa-trash-alt:hover {
   width: 50%;
   height: 100%;
   background-image: url("../img/Group 14.png");
+  background-size: 100% 90%;
   background-color: #CFFA05;
   background-size: cover;
   background-repeat: no-repeat;
@@ -585,7 +586,7 @@ body .tasksBox ul li .fa-trash-alt:hover {
   }
 }
 
-@media (max-height: 500px) {
+@media (max-height: 500px) and (max-width: 800px) {
   .logincontainer {
     border-radius: 20px 20px 0 0;
   }
