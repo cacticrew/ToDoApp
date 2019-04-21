@@ -580,6 +580,8 @@ body .tasksBox ul li .fa-trash-alt:hover {
 @media (min-height: 500px) {
   .frontPanel {
     height: 90vh;
+    width: auto;
+    padding: 50px;
   }
 }
 
