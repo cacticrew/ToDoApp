@@ -33,7 +33,6 @@ body {
     }
     header {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         list-style: none;
@@ -116,6 +115,7 @@ body {
         .addTag {
             display: flex;
             justify-content: center;
+            align-items: center;
             input[type=text] {
                 padding: 3px;
                 margin: 0 5px;
@@ -401,13 +401,6 @@ body {
             width: 100%;
             border-radius: 0 0 20px 20px;
         }
-    }
-}
-
-@media (min-height: 500px) {
-    .frontPanel {
-        width: auto;
-        padding: 50px;
     }
 }
 

@@ -27,7 +27,6 @@ body .frontPanel select {
 }
 body header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   list-style: none;
@@ -107,6 +106,7 @@ body .tagBox {
 body .tagBox .addTag {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 body .tagBox .addTag input[type=text] {
   padding: 3px;
@@ -401,12 +401,6 @@ body .tasksBox ul li .fa-trash-alt:hover {
 .logincontainer .registerBox {
     width: 100%;
     border-radius: 0 0 20px 20px;
-  }
-}
-@media (min-height: 500px) {
-  .frontPanel {
-    width: auto;
-    padding: 50px;
   }
 }
 @media (max-height: 500px) and (max-width: 800px) {
