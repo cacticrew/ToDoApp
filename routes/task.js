@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
         name: req.body.name,
         done: req.body.done,
         dateStart: req.body.date,
-        tags: req.body.tags
+        tags: req.body.tagTable
     });
     task = await task.save();
 

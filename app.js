@@ -1,7 +1,4 @@
-const auth = require('../routes/auth');
-const users = require('../routes/user');
-const tasks = require('../routes/task');
-const tags = require('../routes/tag')
+// Imported modules + mongodb
 const path = require('path');
 const bodyParser = require('body-parser');
 const express = require('express');
@@ -10,8 +7,16 @@ const mongoose = require('mongoose');
 
 
 mongoose.connect('mongodb://localhost/todo')
-    .then (() => console.log('Connected to MongoDB...'))
-    .catch(err => console.error('Could not connect to MondoDB...',err))
+    .then(() => console.log('Connected to MongoDB...'))
+    .catch(err => console.error('Could not connect to MondoDB...', err))
+
+// Route imports
+const auth = require('./routes/auth');
+const users = require('./routes/user');
+const tasks = require('./routes/task');
+const tags = require('./routes/tag');
+const home = require('./routes/home');
+const login = require('./routes/login');
 
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({
@@ -22,33 +27,36 @@ app.use(bodyParser.json());
 // setting view engine
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/../views'));
 
 // set the routes
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static('public'));
 app.use('/api/users', users);
 app.use('/api/tasks', tasks);
 app.use('/api/auth', auth);
 app.use('/api/tags', tags);
-app.get('/', (req, res) => {
-    res.render('index', {
-        foo: 'bar',
-    });
-});
-// app.get('/style/index.css', function (req, res) {
-//     res.sendFile(path.join(__dirname, '/../public/style/index.css'));
-// });
+app.use('/', home);
+app.use('/login', login);
+
 
 // test part, kuba
 
 
-const Schema = new mongoose.Schema({
-    name: { type: String, required: true },
-    mail: { type: String, required: true },
-    password: { type: String, required: true }
-});
+// const Schema = new mongoose.Schema({
+//     name: {
+//         type: String,
+//         required: true
+//     },
+//     mail: {
+//         type: String,
+//         required: true
+//     },
+//     password: {
+//         type: String,
+//         required: true
+//     }
+// });
 
-const User = mongoose.model('user', Schema);
+// const User = mongoose.model('user', Schema);
 
 
 // set the port 

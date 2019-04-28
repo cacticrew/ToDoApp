@@ -8,12 +8,25 @@ const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
+// mongoose.connect('mongodb://localhost/todo')
+//     .then(() => console.log('Connected to MongoDB...'))
+//     .catch(err => console.error('Could not connect to MondoDB...', err))
+
+
+
 /* 
 router.get('/me', auth, async (req, res) => {
     const user = await User.findById(req.user._id).select('-password');
     res.send(user);
 });
 */
+// ???
+// router.post('/new', (req,res) => {
+//     user = new User({
+//         name: req.body.name,
+//         email: req.body.email,
+//         password: req.body.password
+//  });
 
 router.post('/', async (req, res) => {
     const {error} = validate(req.body);
