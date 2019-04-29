@@ -1,4 +1,4 @@
-const auth = require('../routes/auth');
+/* const auth = require('../routes/auth');
 const users = require('../routes/user');
 const tasks = require('../routes/task');
 const tags = require('../routes/tag')

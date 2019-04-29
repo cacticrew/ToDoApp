@@ -12,9 +12,9 @@ mongoose.connect('mongodb://localhost/todo')
 
 // Route imports
 const auth = require('./routes/auth');
-const users = require('./routes/user');
-const tasks = require('./routes/task');
-const tags = require('./routes/tag');
+const users = require('./routes/users');
+const tasks = require('./routes/tasks');
+const tags = require('./routes/tags');
 const home = require('./routes/home');
 const login = require('./routes/login');
 
@@ -27,6 +27,7 @@ app.use(bodyParser.json());
 // setting view engine
 
 app.set('view engine', 'ejs');
+app.set("views", path.join(__dirname, "views"));
 
 // set the routes
 app.use(express.static('public'));

@@ -8,12 +8,6 @@ const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
-// mongoose.connect('mongodb://localhost/todo')
-//     .then(() => console.log('Connected to MongoDB...'))
-//     .catch(err => console.error('Could not connect to MondoDB...', err))
-
-
-
 /* 
 router.get('/me', auth, async (req, res) => {
     const user = await User.findById(req.user._id).select('-password');
@@ -29,9 +23,11 @@ router.get('/me', auth, async (req, res) => {
 //  });
 
 router.post('/', async (req, res) => {
+    // validating the request
     const {error} = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
+    // checking if the user already exists
     let user = await User.findOne({email: req.body.email});
 
     if (user) return res.status(400).send('User already registered.');
@@ -52,7 +48,7 @@ router.post('/', async (req, res) => {
     res.header('x-auth-token', token).send(_.pick(user, ['_id', 'name', 'email']));
 
     */
-   res.send(_.pick(req.body, ['name', 'email']));
+   res.send(_.pick(user, ['name', 'email']));
 });
 
 

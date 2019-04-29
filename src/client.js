@@ -1,4 +1,4 @@
-// do zrobienia 
+/* // do zrobienia 
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -18,4 +18,4 @@ async function getTasks(){
 }
 
 getTasks()
-
+*/
